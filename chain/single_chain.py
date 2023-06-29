@@ -143,4 +143,5 @@ if __name__ == '__main__':
     print(chain.find(100))
     chain.remove(1000)
     chain.remove(100)
+    chain.remove(4)
     chain.show_data()
