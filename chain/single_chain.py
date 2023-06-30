@@ -100,6 +100,20 @@ class SingleChain(object):
 
         return None
 
+    def get_head(self):
+        return self.head
+
+    def delete_head(self):
+        """
+        删除第一个节点
+        :return:
+        """
+        cur = self.head
+        _data = cur.data
+        cur = cur.next
+        self.head = cur
+        return _data
+
     def __len__(self):
         count = 0
         cur = self.head
