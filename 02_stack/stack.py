@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Author: tyrone
-File: stack.py
+File: 02_stack.py
 Time: 2023/6/30
 """
 from chain.single_chain import SingleChain
@@ -96,7 +96,7 @@ class ChainStack:
 
 
 if __name__ == '__main__':
-    # stack = Stack()
+    # 02_stack = Stack()
     stack = ChainStack()
     print(len(stack))
 

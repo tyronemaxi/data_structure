@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Author: tyrone
-File: queue.py
+File: queue_sample.py
 Time: 2023/6/30
 """
 
