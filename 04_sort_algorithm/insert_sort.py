@@ -31,4 +31,3 @@ def insert_sort(arr):
 if __name__ == '__main__':
    arr = [10, 2, 3, 19, 2, 10, 100, 2, 222, 190]
    print(insert_sort(arr))
-
