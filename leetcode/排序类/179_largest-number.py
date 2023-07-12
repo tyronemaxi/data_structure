@@ -12,6 +12,7 @@ Time: 2023/7/3
 # https://leetcode.cn/problems/largest-number/
 """
 from functools import cmp_to_key
+from typing import List
 
 
 class Solution(object):
@@ -20,8 +21,18 @@ class Solution(object):
         :type nums: List[int]
         :rtype: str
         """
-        nums = "".join(sorted(map(str, nums), key=cmp_to_key(lambda x,y:((x+y) < (y+x)) - ((x+y) > (y+x)))))
-        return nums if nums[0] != '0' else '0'
+        strs = map(str, nums)
+
+        def cmp(a, b):
+            if a + b == b + a:
+                return 0
+            elif a + b > b + a:
+                return 1
+            else:
+                return -1
+
+        strs = sorted(strs, key=cmp_to_key(cmp), reverse=True)
+        return ''.join(strs) if strs[0] != '0' else '0'
 
 
 if __name__ == '__main__':

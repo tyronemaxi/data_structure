@@ -27,19 +27,20 @@ class Solution:
 
 # 快速排序的子过程 partition
 # https://leetcode.cn/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/
-class SolutionTwo:
+class Solution2:
     def sortColors(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
+
         def swap(nums, index1, index2):
             nums[index1], nums[index2] = nums[index2], nums[index1]
 
         ptr1 = 0
-        ptr2 = len(nums)
+        ptr2 = len(nums) - 1
 
         i = 0
-        while i < ptr2:
+        while i <= ptr2:
             if nums[i] == 0:
                 swap(nums, ptr1, i)
                 i += 1
@@ -48,13 +49,11 @@ class SolutionTwo:
                 i += 1
 
             else:
-                ptr2 -= 1
                 swap(nums, ptr2, i)
-
-        print(nums)
+                ptr2 -= 1
 
 
 if __name__ == '__main__':
-    s = SolutionTwo()
+    s = Solution2()
     nums = [1, 2, 2, 1, 0, 0]
     s.sortColors(nums)
