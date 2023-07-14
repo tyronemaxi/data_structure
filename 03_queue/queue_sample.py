@@ -15,7 +15,7 @@ class Queue:
         self.__queue = []
         self._capacity = capacity
         self._head = 0
-        self._tail =0
+        self._tail = 0
 
     def enqueue(self, data):
         if self._tail == self._capacity:
