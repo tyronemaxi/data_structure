@@ -60,3 +60,9 @@ class Solution2:
             if len(min_heap) > k:
                 heappop(min_heap)
         return min_heap[0]
+
+
+if __name__ == '__main__':
+    nums = [10, 2, 1, 3, 1]
+    s = Solution2()
+    print(s.findKthLargest(nums, 2))
